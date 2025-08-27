@@ -7,8 +7,6 @@ The goal is to practice:
 - **Terraform** for declarative infra automation
 - **Reusable modules** with configurable inputs/outputs
 
-It’s intentionally small (~10 hours of work) but structured like a real-world infra project you’d see in interviews or on the job.
-
 ---
 
 ## Project Structure
@@ -140,9 +138,7 @@ terraform apply -auto-approve
 
 ---
 
-## Extension Ideas (Future Improvements)
-
-If you come back later and want to extend this project:
+## Extension Ideas
 
 - **Multiple replicas**: Run several containers with different `model_name`s using `count`.
 - **Reverse proxy**: Add Nginx or Traefik container in front of services.
@@ -150,7 +146,3 @@ If you come back later and want to extend this project:
 - **CI/CD**: GitHub Actions that run `terraform fmt -check` + `docker build` on PRs.
 - **Swap FastAPI app**: Replace with a real local LLM runner (e.g., Ollama).
 - **Cloud upgrade**: Replace Docker provider with AWS provider to launch EC2 instances + Docker.
-
-## Clean Up Reminder
-
-If you extend this project to AWS in the future, **always run terraform destroy** to avoid cloud charges.
